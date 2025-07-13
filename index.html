@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CxZ - your hero</title>
+    
+    <meta name="description" content="Portofolio pribadi CxZ, seorang Mahasiswa Informatika yang bersemangat.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+<body id="page-index">
+
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">CxZ</a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                    <!-- Diubah untuk scroll ke shortcut galeri -->
+                    <li><a href="#gallery-shortcut">Gallery</a></li>
+                    <li><a href="tools.html">Lab</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" title="Toggle light/dark mode">
+                <i data-lucide="sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Halo, saya <span class="highlight" id="typed-text-container"><span id="typed-text"></span></span></h1>
+                <p class="hero-subtitle">Saya seorang Mahasiswa Informatika yang bersemangat dalam menciptakan solusi digital yang indah dan fungsional.</p>
+                <a href="#projects" class="btn btn-primary">Lihat Karya Saya</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="about-content">
+                    <img src="https://i.imghippo.com/files/CV1521Eyk.jpg" alt="Foto profil Cxz" class="profile-pic" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Gagal+Muat';">
+                    <div class="about-text">
+                        <p>Selamat datang di sudut digital saya! Saya memiliki beberapa pengalaman di bidang pengembangan web, desain UI/UX, Cyber Security, dll. Saya sangat menikmati proses mengubah ide kompleks menjadi antarmuka yang ramah pengguna.</p>
+                        <p>Beberapa teknologi yang saya pelajari/perdalam antara lain:</p>
+                        <ul class="skills-list"><li>HTML5 & CSS3</li><li>JavaScript (ES6+)</li><li>Networking</li><li>Node.js</li><li>Problem Solving</li><li>Linux</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section bg-light">
+            <div class="container">
+                <h2 class="section-title">Proyek</h2>
+                <div class="project-grid">
+                    <div class="project-card"><img src="https://i.imghippo.com/files/QAe8452yOo.png" alt="Gambar Proyek 1" class="project-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Gagal+Muat';"><div class="project-info"><h3 class="project-title">Rebuild Tool linux</h3><p class="project-description">Tools yang dibangun berdasarkan kebutuhan pribadi, dengan memadadukan fungsionalitas & estetika.</p><a href="#hero" class="btn btn-secondary">Lihat Detail</a></div></div>
+                    <div class="project-card"><img src="https://i.imghippo.com/files/DlX1100eig.jpg" alt="Gambar Proyek 2" class="project-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Gagal+Muat';"><div class="project-info"><h3 class="project-title">Coming Soon</h3><p class="project-description">🤔</p><a href="#hero" class="btn btn-secondary">Lihat Detail</a></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN BARU: SHORTCUT GALERI -->
+        <section id="gallery-shortcut" class="content-section">
+            <div class="container">
+                <a href="gallery.html" class="gallery-shortcut-card">
+                    <div class="shortcut-text">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">GALLERY</h2>
+                        <p>Lihat koleksi visual dari interseption code.</p>
+                        <span class="shortcut-link">
+                            Buka<i data-lucide="arrow-right"></i>
+                        </span>
+                    </div>
+                    <div class="shortcut-image-wrapper">
+                        <img src="https://i.imghippo.com/files/jmr7979Siw.jpg" alt="Pratinjau Gallry">
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Mari Terhubung</h2>
+                <p class="contact-subtitle">Pilih platform favorit Anda untuk menghubungi saya, atau kirim pesan langsung melalui email.</p>
+                <div class="contact-choices"><a href="https://www.linkedin.com/in/[usn]" target="_blank" class="contact-choice" title="LinkedIn"><i data-lucide="linkedin"></i><span>LinkedIn</span></a><a href="https://github.com/Cx27" target="_blank" class="contact-choice" title="GitHub"><i data-lucide="github"></i><span>GitHub</span></a><a href="https://www.instagram.com/[username-anda]" target="_blank" class="contact-choice" title="Instagram"><i data-lucide="instagram"></i><span>Instagram</span></a><a href="https://wa.me/628818126436" target="_blank" class="contact-choice" title="WhatsApp"><i data-lucide="smartphone"></i><span>WhatsApp</span></a><button id="email-button" class="contact-choice" title="Kirim Pesan Langsung"><i data-lucide="mail"></i><span>Email</span></button></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 <a href="#" class="logo-footer">CxZ</a> Powered By kopi.</p></div>
+    </footer>
+
+    <div id="email-modal" class="modal-container"><div class="modal-content"><button id="close-modal" class="modal-close-btn">&times;</button><h3>Kirim Pesan Langsung</h3><p class="modal-subtitle">Formulir ini akan mengirim pesan langsung ke email saya. Saya akan segera meresponnya.</p><form id="contact-form" action="https://formspree.io/f/mldnnved" method="POST"><div class="form-group"><input type="text" id="name" name="name" placeholder="Nama Anda" required></div><div class="form-group"><input type="email" id="email" name="email" placeholder="Email Anda" required></div><div class="form-group"><textarea id="message" name="message" rows="5" placeholder="Pesan Anda" required></textarea></div><button type="submit" class="btn btn-primary btn-large">Kirim Pesan</button></form><p id="form-status"></p></div></div>
+
+    <div id="page-transitioner">
+        <div id="transition-bubble"></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

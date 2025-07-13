@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - CxZ</title>
+    <meta name="description" content="Koleksi karya visual, desain, dan eksplorasi oleh CxZ.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+</head>
+<body id="page-gallery">
+
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">CxZ</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Beranda</a></li>
+                    <li><a href="index.html#about">Tentang</a></li>
+                    <li><a href="index.html#projects">Proyek</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="tools.html">Lab</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" title="Toggle light/dark mode">
+                <i data-lucide="sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <h1 class="gallery-page-title">Gallery</h1>
+                    <p class="section-subtitle" style="max-width: 600px; margin: 10px auto 0 auto;">Sebuah dokumentasi ide, desain, dan eksplorasi interaktif. Klik untuk detail.</p>
+                </div>
+                
+                <div id="filter-buttons" class="filter-buttons-container">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="linux">Linux</button>
+                    <button class="filter-btn" data-filter="desain">Desain</button>
+                    <button class="filter-btn" data-filter="ilustrasi">Ilustrasi</button>
+                </div>
+
+                <div id="gallery-grid-new" class="gallery-grid-new">
+                    <div class="gallery-item-new" 
+                         data-category="linux"
+                         data-full-image="https://i.imghippo.com/files/SJjW4918zSw.jpg" 
+                         data-title="The Amatir Engginer" 
+                         data-description="Dibalik layar sistem yang kompleks, saya adalah The Amatir Ng— membangun dari logika, bereksperimen dari penasaran, dan menyatukan semuanya dengan desain yang tidak membosankan. Ini bukan cuma teknik, ini adalah representasi dari entitas 'saya' itu sendiri."
+                         data-audio-src="assets/audio/saraunh0ly - wutiwant (SlowedReverb).mp3"
+                         data-audio-title="Saraunh0ly - Wutiwant (SlowedReverb)">
+                        <img src="https://i.imghippo.com/files/SJjW4918zSw.jpg" alt="The Amatir Engginer">
+                        <div class="overlay">
+                            <h3>The Amatir Engginer</h3>
+                            <p>CxZ</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item-new" 
+                         data-category="linux"
+                         data-full-image="https://i.imghippo.com/files/XKP9071QA.jpg" 
+                         data-title="BLACKHAT WHO LAUGH" 
+                         data-description="The raw essence of my exploration into systems, logic, and ethical boundaries — where passion meets precision in the Linux realm, i'll do it solo."
+                         data-audio-src="assets/audio/Ride or Die pt.mp3"
+                         data-audio-title="Ride or Die pt">
+                        <img src="https://i.imghippo.com/files/XKP9071QA.jpg" alt="The BLACKHAT">
+                        <div class="overlay">
+                            <h3>BLACKHAT WHO LAUGH</h3>
+                            <p>LINUX</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item-new" 
+                         data-category="desain"
+                         data-full-image="https://i.imghippo.com/files/QAe8452yOo.png" 
+                         data-title="Komponen Antarmuka: Kartu Profil" 
+                         data-description="Sebuah komponen UI untuk menampilkan profil pengguna dalam sebuah aplikasi sosial. Didesain dengan pendekatan minimalis menggunakan skema warna monokromatik. Tujuannya adalah menciptakan tampilan yang bersih dan fungsional."
+                         data-audio-src="assets/audio/saraunh0ly - wutiwant (SlowedReverb).mp3"
+                         data-audio-title="Saraunh0ly - Wutiwant (SlowedReverb)">
+                        <img src="https://i.imghippo.com/files/QAe8452yOo.png" alt="UI Component">
+                        <div class="overlay">
+                            <h3>Kartu Profil UI</h3>
+                            <p>Desain</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item-new" 
+                         data-category="ilustrasi"
+                         data-full-image="https://i.imghippo.com/files/TEJH5136rQ.jpeg" 
+                         data-title="Ilustrasi Ikon Aplikasi" 
+                         data-description="Satu set ikon kustom yang dibuat untuk sebuah aplikasi produktivitas. Setiap ikon dirancang agar jelas, ringkas, dan konsisten secara visual, bahkan dalam ukuran kecil sekalipun."
+                         data-audio-src="assets/audio/Ride or Die pt.mp3"
+                         data-audio-title="Ride or Die pt">
+                        <img src="https://i.imghippo.com/files/TEJH5136rQ.jpeg" alt="Ilustrasi">
+                        <div class="overlay">
+                            <h3>Ikon Aplikasi</h3>
+                            <p>Ilustrasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <audio id="gallery-audio-player"></audio>
+    
+    <div id="audio-controls-container" class="audio-controls-container">
+        <span id="now-playing-title"></span>
+    </div>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 <a href="#" class="logo-footer">CxZ</a> Powered By kopi.</p></div>
+    </footer>
+
+    <div id="gallery-modal-overlay" class="gallery-modal-overlay">
+        <div class="gallery-modal-content">
+            <button id="gallery-modal-close" class="gallery-modal-close">&times;</button>
+            <img id="gallery-modal-image" src="https://i.imghippo.com/files/sSqb4286Kw.jpg" alt="bbb">
+            <div class="gallery-modal-text">
+                <h3 id="gallery-modal-title"></h3>
+                <p id="gallery-modal-description"></p>
+                
+                <div id="modal-audio-controls">
+                    <button id="modal-play-pause-btn" class="modal-audio-btn">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <div class="audio-info">
+                        <span id="modal-audio-title">Audio belum dimuat</span>
+                        <div id="modal-progress-bar-container">
+                            <div id="modal-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-transitioner">
+        <div id="transition-bubble"></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

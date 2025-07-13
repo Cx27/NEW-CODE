@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CxZ - Lab</title>
+    
+    <meta name="description" content="Laboratorium oleh CxZ.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+</head>
+<body id="page-tools">
+
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">CxZ</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Beranda</a></li>
+                    <li><a href="index.html#about">Tentang</a></li>
+                    <li><a href="index.html#projects">Proyek</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tools.html" class="active">Lab</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" title="Toggle light/dark mode">
+                <i data-lucide="sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="lab-hero" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝖙𝖔 𝖙𝖍𝖊 𝖑𝖆𝖇 𝖍𝖔𝖒𝖒𝖎𝖊</h1>
+                <p class="hero-subtitle">𝑇𝑒𝑚𝑝𝑎𝑡 𝑠𝑎𝑦𝑎 𝑏𝑒𝑟𝑒𝑘𝑠𝑝𝑒𝑟𝑖𝑚𝑒𝑛 𝑑𝑒𝑛𝑔𝑎𝑛 𝑘𝑜𝑑𝑒, 𝑘𝑒𝑎𝑚𝑎𝑛𝑎𝑛, 𝑑𝑎𝑛 𝑖𝑑𝑒-𝑖𝑑𝑒 𝑖𝑛𝑡𝑒𝑟𝑎𝑘𝑡𝑖𝑓.</p>
+            </div>
+        </section>
+
+        <section id="lab-tools" class="content-section bg-light lab-background">
+            <div class="container">
+                <h2 class="section-title">Alat & Eksperimen</h2>
+                <div class="project-grid">
+    <div class="project-card">
+        <div class="project-card-icon"><i data-lucide="lock-keyhole"></i></div>
+        <div class="project-info">
+            <h3 class="project-title">🔐 Encoder & Decoder</h3>
+            <p class="project-description">Alat serbaguna untuk analisis payload (Base64, URL, Hex, dll).</p>
+            <button id="open-encoder-decoder" class="btn btn-secondary">Mulai</button>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-card-icon"><i data-lucide="terminal-square"></i></div>
+        <div class="project-info">
+            <h3 class="project-title">👨‍💻 Simulator Terminal</h3>
+            <p class="project-description">Rasakan pengalaman terminal Linux sederhana langsung di browser.</p>
+            <button id="open-terminal" class="btn btn-secondary">Mulai</button>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-card-icon"><i data-lucide="wifi"></i></div>
+        <div class="project-info">
+            <h3 class="project-title">📡 Info Jaringan</h3>
+            <p class="project-description">Lihat informasi IP publik, privat, dan lokasi geografis Anda.</p>
+            <button id="open-network-info" class="btn btn-secondary">Mulai</button>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-card-icon"><i data-lucide="area-chart"></i></div>
+        <div class="project-info">
+            <span class="coming-soon-badge">Segera Hadir</span>
+            <h3 class="project-title">📊 Penganalisis Log</h3>
+            <p class="project-description">Visualisasikan file log untuk menemukan anomali dan pola akses.</p>
+             <button class="btn btn-secondary disabled">Mulai</button>
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <a href="#" class="logo-footer">CxZ</a> Powered By kopi.</p>
+        </div>
+    </footer>
+
+    <div id="encoder-decoder-modal" class="modal-container">
+        <div class="modal-content tool-modal">
+            <button id="close-encoder-decoder" class="modal-close-btn">&times;</button>
+            <h3>Utilitas Teks & Data</h3>
+            <div class="tool-controls">
+                <select id="encoder-type" class="form-control">
+                    <optgroup label="Encoding / Decoding">
+                        <option value="encode-base64">Encode: Base64</option>
+                        <option value="decode-base64">Decode: Base64</option>
+                        <option value="encode-url">Encode: URL Component</option>
+                        <option value="decode-url">Decode: URL Component</option>
+                    </optgroup>
+                    <optgroup label="Hashing (One-Way)">
+                        <option value="hash-sha256">Hash: SHA-256</option>
+                    </optgroup>
+                    <optgroup label="Transformasi Teks">
+                        <option value="case-upper">UPPERCASE</option>
+                        <option value="case-lower">lowercase</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="tool-io-grid">
+                <div class="io-panel">
+                    <label for="encoder-input">Input</label>
+                    <textarea id="encoder-input" class="form-control" rows="8" placeholder="Ketik atau tempel di sini..."></textarea>
+                </div>
+                <div class="io-panel swap-panel">
+                    <button id="swap-io" class="btn-swap" title="Tukar Input/Output"><i data-lucide="arrow-right-left"></i></button>
+                </div>
+                <div class="io-panel">
+                    <label for="encoder-output">Output</label>
+                    <textarea id="encoder-output" class="form-control" rows="8" readonly placeholder="Hasil akan muncul di sini..."></textarea>
+                    <button class="btn btn-secondary btn-copy" data-target="encoder-output">Salin Hasil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="terminal-container">
+        <div id="terminal-window">
+            <div id="terminal-header">
+                <span id="terminal-title">guest@cxz.me: ~</span>
+                <button id="close-terminal" class="terminal-close-btn">&times;</button>
+            </div>
+            <div id="terminal-body">
+                <div id="terminal-output"></div>
+                <div id="terminal-input-line">
+                    <span class="prompt">guest@cxz.me:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="network-info-modal" class="modal-container">
+        <div class="modal-content tool-modal">
+            <button id="close-network-info" class="modal-close-btn">&times;</button>
+            <h3>Informasi Jaringan Anda</h3>
+            <p class="modal-subtitle">Data diambil secara real-time dari browser dan API publik.</p>
+            <div id="network-info-output">
+                <p>Memuat data...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-transitioner">
+        <div id="transition-bubble"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

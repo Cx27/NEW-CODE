@@ -520,13 +520,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(openBtn) openBtn.style.display = 'none';
             }
         }
-        
+
+        function initGlitchEffectLab() {
+            if (document.body.id !== 'page-tools') return;
+            // Create overlay
+            const glitchOverlay = document.createElement('div');
+            glitchOverlay.className = 'glitch-overlay';
+            document.body.appendChild(glitchOverlay);
+            // Function to spawn glitch rectangles
+            function spawnGlitch() {
+                if (Math.random() > 0.7) { // 30% chance per tick
+                    const rect = document.createElement('div');
+                    rect.className = 'glitch-rect';
+                    rect.style.top = Math.random() * window.innerHeight + 'px';
+                    rect.style.left = Math.random() * window.innerWidth + 'px';
+                    rect.style.width = (30 + Math.random() * 120) + 'px';
+                    rect.style.height = (6 + Math.random() * 24) + 'px';
+                    rect.style.background = `hsl(${Math.floor(Math.random()*360)},80%,60%)`;
+                    glitchOverlay.appendChild(rect);
+                    setTimeout(() => glitchOverlay.removeChild(rect), 350 + Math.random()*250);
+                }
+                // Occasionally add scanline
+                if (Math.random() > 0.92) {
+                    const scan = document.createElement('div');
+                    scan.className = 'glitch-scanline';
+                    scan.style.top = Math.random() * window.innerHeight + 'px';
+                    glitchOverlay.appendChild(scan);
+                    setTimeout(() => glitchOverlay.removeChild(scan), 400 + Math.random()*200);
+                }
+            }
+            // Run glitch every 120ms
+            setInterval(spawnGlitch, 120);
+        }
+    
+        function initGlitchTextLab() {
+            if (document.body.id !== 'page-tools') return;
+            const heroTitle = document.querySelector('.hero-title');
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            if (!heroTitle) return;
+            heroTitle.classList.add('glitch-text');
+            if (heroSubtitle) heroSubtitle.classList.add('glitch-text');
+            function glitchOnce(el) {
+                el.classList.add('glitching');
+                setTimeout(() => el.classList.remove('glitching'), 320);
+            }
+            // Glitch every 2-5 detik, random
+            setInterval(() => {
+                if (Math.random() > 0.7) glitchOnce(heroTitle);
+                if (heroSubtitle && Math.random() > 0.85) glitchOnce(heroSubtitle);
+            }, 2200);
+        }
+    
         initEncoderDecoderTool();
         initTerminal();
         initNetworkInfoTool();
+        initGlitchEffectLab();
+        initGlitchTextLab();
     }
 
-    // --- EKSEKUSI SCRIPT/ (TIDAK DIUBAH) ---
+    // --- EKSEKUSI SCRIPT (TIDAK DIUBAH) ---
     handleScroll();
     themeToggle();
     pageTransition();
@@ -543,3 +595,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleScroll);
 });
+

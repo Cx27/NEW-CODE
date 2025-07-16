@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initNetworkInfoTool();
     }
 
-    // --- EKSEKUSI SCRIPT (TIDAK DIUBAH) ---
+    // --- EKSEKUSI SCRIPT/ (TIDAK DIUBAH) ---
     handleScroll();
     themeToggle();
     pageTransition();

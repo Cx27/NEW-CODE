@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Detail - Rebuild Tool Linux</title>
+    <meta name="description" content="Detail pengembangan proyek Rebuild Tool Linux oleh CxZ.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="page-projects">
+
+    <div id="page-transitioner">
+        <div id="transition-bubble"></div>
+    </div>
+
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">CxZ</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#projects">Proyek Lain</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tools.html">Lab</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" title="Toggle light/dark mode">
+                </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:0.7rem;">
+                        <span class="lab-project-badge">Proyek: Rebuild Tool Linux</span>
+                        <span class="lab-badge-os">Open Source</span>
+                    </div>
+                    <h1 class="section-title" tabindex="0">Lab Proyek & Showcase</h1>
+                    <p class="hero-subtitle">
+                        <b>Rebuild Tool Linux</b> adalah proyek otomasi dan utilitas untuk workflow harian di Linux, dengan fitur CLI, UI, dan dokumentasi interaktif.
+                        <br><span style="font-weight:500;">Tips:</span> Klik komputer atau tombol di bawah untuk membuka terminal & kode.
+                    </p>
+                </div>
+                <div class="lab-flex-grid">
+                     <div class="lab-visual-area">
+                        <div class="lab-card">
+                            <div id="lab-computer-anim" style="cursor:pointer;">
+                                <svg width="180" height="120" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="lab-computer-svg">
+                                     <rect x="10" y="10" width="160" height="70" rx="10" class="svg-screen-border"/>
+                                     <rect x="30" y="25" width="120" height="40" rx="6" class="svg-screen-bg"/>
+                                     <text x="90" y="50" text-anchor="middle" font-size="15" font-family="monospace" class="svg-text">$<tspan id="lab-computer-cursor">_</tspan></text>
+                                     <rect x="70" y="85" width="40" height="8" rx="3" class="svg-stand"/>
+                                     <rect x="50" y="100" width="80" height="8" rx="3" class="svg-base"/>
+                                </svg>
+                                <div class="lab-computer-prompt">Klik komputer untuk membuka terminal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lab-desc-area">
+                        <div class="lab-card">
+                            <h2 class="lab-card-title"><i data-lucide="terminal"></i> Rebuild Tool Linux</h2>
+                            <p class="lab-card-description">Tools ini dibangun berdasarkan kebutuhan pribadi, memadukan fungsionalitas CLI, UI, dan integrasi workflow harian. Fitur utama: <b>otomatisasi task Linux</b>, <b>custom command</b>, dan <b>UI terminal interaktif</b>.</p>
+                            <ul class="lab-feature-list">
+                                <li><i data-lucide="code"></i> Built with: html, js, CSS</li>
+                                <li><i data-lucide="settings"></i> Fitur: Custom CLI, UI, integrasi workflow, theme, dan dokumentasi interaktif</li>
+                            </ul>
+                            <div style="margin-top:1.5rem;display:flex;gap:1em;">
+                                <span class="btn btn-primary" id="open-terminal-project">Buka Terminal Proyek</span>
+                                <a href="https://github.com/Cx27/NEW-CODE" target="_blank" class="btn btn-secondary">Lihat di GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="virtual-terminal" class="virtual-terminal hidden">
+                    <pre><code id="terminal-output"></code><span class="cursor">&nbsp;</span></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-section">
+        <div class="container"><p>&copy; 2025 <a href="index.html" class="logo-footer">CxZ</a> Powered By kopi.</p></div>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let destinationPage;
             if (targetUrl.includes('gallery.html')) destinationPage = 'gallery';
             else if (targetUrl.includes('tools.html')) destinationPage = 'tools';
+             else if (targetUrl.includes('projects.html')) destinationPage = 'projects';
             else destinationPage = 'index';
             const destinationStorageKey = `theme-${destinationPage}`;
             const destinationTheme = localStorage.getItem(destinationStorageKey) || 'dark';
@@ -577,8 +578,64 @@ document.addEventListener('DOMContentLoaded', function() {
         initGlitchEffectLab();
         initGlitchTextLab();
     }
+function initPageProjects() {
+        const openTerminalBtn = document.getElementById('open-terminal-project');
+        const computerAnim = document.getElementById('lab-computer-anim');
+        const terminal = document.getElementById('virtual-terminal');
+        const terminalOutput = document.getElementById('terminal-output');
+        const computerCursor = document.getElementById('lab-computer-cursor');
 
-    // --- EKSEKUSI SCRIPT (TIDAK DIUBAH) ---
+        if (!terminal || !terminalOutput) return;
+
+        if (computerCursor) {
+            setInterval(() => {
+                computerCursor.style.opacity = computerCursor.style.opacity === '0' ? '1' : '0';
+            }, 700);
+        }
+
+        const codeToType = `<span class="comment"># Contoh kode sederhana dengan Python</span>\n` +
+                           `<span class="keyword">def</span> <span class="function">sapa_dunia</span>():\n` +
+                           `    nama = <span class="string">"Dunia"</span>\n` +
+                           `    print(f<span class="string">"Halo, {nama}!"</span>)\n\n` +
+                           `<span class="comment"># Memanggil fungsi</span>\n` +
+                           `<span class="function">sapa_dunia</span>()`;
+
+        function typeAnimation(text, element) {
+            let i = 0;
+            element.innerHTML = "";
+            const typing = () => {
+                if (i < text.length) {
+                    const char = text.charAt(i);
+                    if (char === '<') {
+                        const tagEnd = text.indexOf('>', i);
+                        element.innerHTML += text.substring(i, tagEnd + 1);
+                        i = tagEnd;
+                    } else {
+                        element.innerHTML += char;
+                    }
+                    i++;
+                    setTimeout(typing, 25);
+                }
+            };
+            typing();
+        }
+        
+        function showTerminal() {
+            if (terminal.classList.contains('hidden')) {
+                terminal.classList.remove('hidden');
+                terminal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                typeAnimation(codeToType, terminalOutput);
+            }
+        }
+
+        if (openTerminalBtn) openTerminalBtn.addEventListener('click', showTerminal);
+        if (computerAnim) computerAnim.addEventListener('click', showTerminal);
+        
+        try { lucide.createIcons(); } catch(e) { console.error("Gagal render ikon Lucide di page-projects:", e); }
+    }
+
+
+    // --- EKSEKUSI SCRIPT (ROUTER) ---
     handleScroll();
     themeToggle();
     pageTransition();
@@ -591,8 +648,9 @@ document.addEventListener('DOMContentLoaded', function() {
         initPageGallery();
     } else if (bodyId === 'page-tools') {
         initPageTools();
+    } else if (bodyId === 'page-projects') { // <-- DITAMBAHKAN
+        initPageProjects();
     }
 
     window.addEventListener('scroll', handleScroll);
 });
-
